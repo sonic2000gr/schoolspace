@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:AC Inverter-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -233,8 +234,6 @@ F 3 "~" H 6200 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6200 3000 6200 3300
-Wire Wire Line
 	6200 3850 6200 4000
 Wire Wire Line
 	6200 4400 6200 4600
@@ -253,48 +252,19 @@ Connection ~ 5500 2000
 $Comp
 L Device:CP C2
 U 1 1 5CA6CF81
-P 5900 3000
-F 0 "C2" V 6155 3000 50  0000 C CNN
-F 1 "100u" V 6064 3000 50  0000 C CNN
-F 2 "" H 5938 2850 50  0001 C CNN
-F 3 "~" H 5900 3000 50  0001 C CNN
-	1    5900 3000
+P 5850 3000
+F 0 "C2" V 6105 3000 50  0000 C CNN
+F 1 "100u" V 6014 3000 50  0000 C CNN
+F 2 "" H 5888 2850 50  0001 C CNN
+F 3 "~" H 5850 3000 50  0001 C CNN
+	1    5850 3000
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5750 3000 5500 3000
+	5700 3000 5500 3000
 Connection ~ 5500 3000
 Wire Wire Line
 	5500 3000 5500 3050
-Wire Wire Line
-	6050 3000 6050 3300
-Wire Wire Line
-	6050 3300 6200 3300
-Connection ~ 6200 3300
-Wire Wire Line
-	6200 3300 6200 3550
-$Comp
-L Transistor_BJT:BC550 Q2
-U 1 1 5CA6E579
-P 7000 2550
-F 0 "Q2" H 7191 2596 50  0000 L CNN
-F 1 "BC550" H 7191 2505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7200 2475 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 7000 2550 50  0001 L CNN
-	1    7000 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:BC560 Q3
-U 1 1 5CA6FB2A
-P 7000 4000
-F 0 "Q3" H 7191 3954 50  0000 L CNN
-F 1 "BC560" H 7191 4045 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7200 3925 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 7000 4000 50  0001 L CNN
-	1    7000 4000
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	6800 2550 6650 2550
 Connection ~ 6200 2550
@@ -384,4 +354,44 @@ Text GLabel 8050 3300 2    50   Output ~ 0
 AC_Out
 Wire Wire Line
 	8050 3300 7650 3300
+Text GLabel 8050 1550 2    50   Input ~ 0
+Step_UP_9V+
+Wire Wire Line
+	8050 1550 7100 1550
+Wire Wire Line
+	7100 1550 7100 2000
+Connection ~ 7100 2000
+Text GLabel 8000 4600 2    50   Input ~ 0
+Step_UP_9V_GND
+Wire Wire Line
+	8000 4600 7100 4600
+Connection ~ 7100 4600
+Wire Wire Line
+	6200 3000 6200 3550
+Wire Wire Line
+	6000 3000 6000 2550
+Wire Wire Line
+	6000 2550 6200 2550
+$Comp
+L Transistor_BJT:BC327 Q3
+U 1 1 5C928A20
+P 7000 4000
+F 0 "Q3" H 7191 3954 50  0000 L CNN
+F 1 "BC327" H 7191 4045 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7200 3925 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF" H 7000 4000 50  0001 L CNN
+	1    7000 4000
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:BC337 Q2
+U 1 1 5C92B416
+P 7000 2550
+F 0 "Q2" H 7191 2596 50  0000 L CNN
+F 1 "BC337" H 7191 2505 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7200 2475 50  0001 L CIN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 7000 2550 50  0001 L CNN
+	1    7000 2550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -63,7 +63,7 @@ $EndComp
 Wire Wire Line
 	5050 3650 5050 4600
 Wire Wire Line
-	5050 4600 4150 4600
+	5050 4600 4500 4600
 Wire Wire Line
 	3300 4600 3300 4400
 Wire Wire Line
@@ -145,22 +145,18 @@ Connection ~ 5050 4600
 $Comp
 L Device:CP C1
 U 1 1 5CA59F0A
-P 4650 3250
-F 0 "C1" V 4395 3250 50  0000 C CNN
-F 1 "100u" V 4486 3250 50  0000 C CNN
-F 2 "" H 4688 3100 50  0001 C CNN
-F 3 "~" H 4650 3250 50  0001 C CNN
-	1    4650 3250
+P 4850 3250
+F 0 "C1" V 4595 3250 50  0000 C CNN
+F 1 "100u" V 4686 3250 50  0000 C CNN
+F 2 "" H 4888 3100 50  0001 C CNN
+F 3 "~" H 4850 3250 50  0001 C CNN
+	1    4850 3250
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4800 3250 5050 3250
+	5000 3250 5050 3250
 Wire Wire Line
-	4500 3250 4200 3250
-Wire Wire Line
-	4200 3250 4200 2200
-Wire Wire Line
-	4200 2200 2450 2200
+	3900 2200 2450 2200
 Wire Wire Line
 	2450 2200 2450 3900
 Wire Wire Line
@@ -394,4 +390,62 @@ F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 7000 2
 	1    7000 2550
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C C5
+U 1 1 5C937B4E
+P 4250 3850
+F 0 "C5" H 4100 3950 50  0000 L CNN
+F 1 "680n" H 4050 3750 50  0000 L CNN
+F 2 "" H 4288 3700 50  0001 C CNN
+F 3 "~" H 4250 3850 50  0001 C CNN
+	1    4250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4000 4250 4600
+Connection ~ 4250 4600
+Wire Wire Line
+	4250 4600 4150 4600
+$Comp
+L Device:R_US R9
+U 1 1 5C93918F
+P 4100 3250
+F 0 "R9" V 4000 3200 50  0000 L CNN
+F 1 "10k" V 4200 3200 50  0000 L CNN
+F 2 "" V 4140 3240 50  0001 C CNN
+F 3 "~" H 4100 3250 50  0001 C CNN
+	1    4100 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4250 3700 4250 3250
+Wire Wire Line
+	3900 2200 3900 3250
+Wire Wire Line
+	3900 3250 3950 3250
+$Comp
+L Device:R_POT_US RV1
+U 1 1 5C93F1B7
+P 4500 3850
+F 0 "RV1" H 4700 3750 50  0000 R CNN
+F 1 "10k" H 4700 3650 50  0000 R CNN
+F 2 "" H 4500 3850 50  0001 C CNN
+F 3 "~" H 4500 3850 50  0001 C CNN
+	1    4500 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4000 4500 4600
+Connection ~ 4500 4600
+Wire Wire Line
+	4500 4600 4250 4600
+Wire Wire Line
+	4500 3700 4500 3250
+Wire Wire Line
+	4500 3250 4250 3250
+Connection ~ 4250 3250
+Wire Wire Line
+	4700 3250 4700 3850
+Wire Wire Line
+	4700 3850 4650 3850
 $EndSCHEMATC
