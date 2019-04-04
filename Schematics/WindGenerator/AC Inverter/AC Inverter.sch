@@ -27,43 +27,6 @@ F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 3300 2400 50
 $EndComp
 NoConn ~ 3200 2400
 NoConn ~ 3400 2400
-$Comp
-L Transistor_FET:BS170 Q1
-U 1 1 5CA53ED2
-P 5400 3250
-F 0 "Q1" H 5606 3296 50  0000 L CNN
-F 1 "BS170" H 5606 3205 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5600 3175 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BS/BS170.pdf" H 5400 3250 50  0001 L CNN
-	1    5400 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R1
-U 1 1 5CA5496B
-P 5050 2950
-F 0 "R1" H 5118 2996 50  0000 L CNN
-F 1 "220k" H 5118 2905 50  0000 L CNN
-F 2 "" V 5090 2940 50  0001 C CNN
-F 3 "~" H 5050 2950 50  0001 C CNN
-	1    5050 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R2
-U 1 1 5CA551A5
-P 5050 3500
-F 0 "R2" H 5118 3546 50  0000 L CNN
-F 1 "100k" H 5118 3455 50  0000 L CNN
-F 2 "" V 5090 3490 50  0001 C CNN
-F 3 "~" H 5050 3500 50  0001 C CNN
-	1    5050 3500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5050 3650 5050 4600
-Wire Wire Line
-	5050 4600 4500 4600
 Wire Wire Line
 	3300 4600 3300 4400
 Wire Wire Line
@@ -71,15 +34,6 @@ Wire Wire Line
 Connection ~ 3400 4600
 Wire Wire Line
 	3400 4600 3300 4600
-Wire Wire Line
-	5200 3250 5050 3250
-Wire Wire Line
-	5050 3250 5050 3350
-Wire Wire Line
-	5050 3100 5050 3250
-Connection ~ 5050 3250
-Wire Wire Line
-	5050 2800 5050 2000
 $Comp
 L power:GND #PWR?
 U 1 1 5CA5653A
@@ -107,54 +61,6 @@ F 3 "" H 3500 1600 50  0001 C CNN
 	1    3500 1600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R_US R3
-U 1 1 5CA57126
-P 5500 2600
-F 0 "R3" H 5568 2646 50  0000 L CNN
-F 1 "1k2" H 5568 2555 50  0000 L CNN
-F 2 "" V 5540 2590 50  0001 C CNN
-F 3 "~" H 5500 2600 50  0001 C CNN
-	1    5500 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5500 2450 5500 2000
-Wire Wire Line
-	5500 2000 5050 2000
-Wire Wire Line
-	5500 2750 5500 3000
-$Comp
-L Device:R_US R4
-U 1 1 5CA5838C
-P 5500 3900
-F 0 "R4" H 5568 3946 50  0000 L CNN
-F 1 "270" H 5568 3855 50  0000 L CNN
-F 2 "" V 5540 3890 50  0001 C CNN
-F 3 "~" H 5500 3900 50  0001 C CNN
-	1    5500 3900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5500 3450 5500 3750
-Wire Wire Line
-	5500 4050 5500 4600
-Wire Wire Line
-	5500 4600 5050 4600
-Connection ~ 5050 4600
-$Comp
-L Device:CP C1
-U 1 1 5CA59F0A
-P 4850 3250
-F 0 "C1" V 4595 3250 50  0000 C CNN
-F 1 "100u" V 4686 3250 50  0000 C CNN
-F 2 "" H 4888 3100 50  0001 C CNN
-F 3 "~" H 4850 3250 50  0001 C CNN
-	1    4850 3250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5000 3250 5050 3250
 Wire Wire Line
 	3900 2200 2450 2200
 Wire Wire Line
@@ -185,216 +91,13 @@ NoConn ~ 3800 3400
 NoConn ~ 3800 3200
 NoConn ~ 3800 2900
 NoConn ~ 3800 2800
-$Comp
-L Device:R_US R5
-U 1 1 5CA5FD47
-P 6200 2250
-F 0 "R5" H 6268 2296 50  0000 L CNN
-F 1 "10k" H 6268 2205 50  0000 L CNN
-F 2 "" V 6240 2240 50  0001 C CNN
-F 3 "~" H 6200 2250 50  0001 C CNN
-	1    6200 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D1
-U 1 1 5CA60C0C
-P 6200 2850
-F 0 "D1" V 6246 2771 50  0000 R CNN
-F 1 "1N4148" V 6155 2771 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6200 2675 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6200 2850 50  0001 C CNN
-	1    6200 2850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Diode:1N4148 D2
-U 1 1 5CA61F46
-P 6200 3700
-F 0 "D2" V 6246 3621 50  0000 R CNN
-F 1 "1N4148" V 6155 3621 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6200 3525 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6200 3700 50  0001 C CNN
-	1    6200 3700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_US R6
-U 1 1 5CA62DA8
-P 6200 4250
-F 0 "R6" H 6268 4296 50  0000 L CNN
-F 1 "10k" H 6268 4205 50  0000 L CNN
-F 2 "" V 6240 4240 50  0001 C CNN
-F 3 "~" H 6200 4250 50  0001 C CNN
-	1    6200 4250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6200 3850 6200 4000
-Wire Wire Line
-	6200 4400 6200 4600
 Wire Wire Line
 	3500 1600 3500 2400
-Wire Wire Line
-	6200 2400 6200 2550
-Wire Wire Line
-	6200 2100 6200 2000
-Wire Wire Line
-	6200 4600 5500 4600
-Connection ~ 5500 4600
-Wire Wire Line
-	6200 2000 5500 2000
-Connection ~ 5500 2000
 $Comp
-L Device:CP C2
-U 1 1 5CA6CF81
-P 5850 3000
-F 0 "C2" V 6105 3000 50  0000 C CNN
-F 1 "100u" V 6014 3000 50  0000 C CNN
-F 2 "" H 5888 2850 50  0001 C CNN
-F 3 "~" H 5850 3000 50  0001 C CNN
-	1    5850 3000
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5700 3000 5500 3000
-Connection ~ 5500 3000
-Wire Wire Line
-	5500 3000 5500 3050
-Wire Wire Line
-	6800 2550 6650 2550
-Connection ~ 6200 2550
-Wire Wire Line
-	6200 2550 6200 2700
-Wire Wire Line
-	6800 4000 6650 4000
-Connection ~ 6200 4000
-Wire Wire Line
-	6200 4000 6200 4100
-$Comp
-L Device:CP C3
-U 1 1 5CA72E13
-P 6650 3250
-F 0 "C3" H 6768 3296 50  0000 L CNN
-F 1 "100u" H 6768 3205 50  0000 L CNN
-F 2 "" H 6688 3100 50  0001 C CNN
-F 3 "~" H 6650 3250 50  0001 C CNN
-	1    6650 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6650 3100 6650 2550
-Connection ~ 6650 2550
-Wire Wire Line
-	6650 2550 6200 2550
-Wire Wire Line
-	6650 3400 6650 4000
-Connection ~ 6650 4000
-Wire Wire Line
-	6650 4000 6200 4000
-Wire Wire Line
-	7100 2350 7100 2000
-Wire Wire Line
-	7100 2000 6200 2000
-Connection ~ 6200 2000
-Wire Wire Line
-	7100 4200 7100 4600
-Wire Wire Line
-	7100 4600 6200 4600
-Connection ~ 6200 4600
-$Comp
-L Device:R_US R7
-U 1 1 5CA75E51
-P 7100 3050
-F 0 "R7" H 7168 3096 50  0000 L CNN
-F 1 "0.22" H 7168 3005 50  0000 L CNN
-F 2 "" V 7140 3040 50  0001 C CNN
-F 3 "~" H 7100 3050 50  0001 C CNN
-	1    7100 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R8
-U 1 1 5CA76250
-P 7100 3500
-F 0 "R8" H 7168 3546 50  0000 L CNN
-F 1 "0.22" H 7168 3455 50  0000 L CNN
-F 2 "" V 7140 3490 50  0001 C CNN
-F 3 "~" H 7100 3500 50  0001 C CNN
-	1    7100 3500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7100 2750 7100 2900
-Wire Wire Line
-	7100 3200 7100 3300
-Wire Wire Line
-	7100 3650 7100 3800
-$Comp
-L Device:CP C4
-U 1 1 5CA7894B
-P 7500 3300
-F 0 "C4" V 7755 3300 50  0000 C CNN
-F 1 "1000u" V 7664 3300 50  0000 C CNN
-F 2 "" H 7538 3150 50  0001 C CNN
-F 3 "~" H 7500 3300 50  0001 C CNN
-	1    7500 3300
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7350 3300 7100 3300
-Connection ~ 7100 3300
-Wire Wire Line
-	7100 3300 7100 3350
-Text GLabel 8050 3300 2    50   Output ~ 0
-AC_Out
-Wire Wire Line
-	8050 3300 7650 3300
-Text GLabel 8050 1550 2    50   Input ~ 0
-Step_UP_9V+
-Wire Wire Line
-	8050 1550 7100 1550
-Wire Wire Line
-	7100 1550 7100 2000
-Connection ~ 7100 2000
-Text GLabel 8000 4600 2    50   Input ~ 0
-Step_UP_9V_GND
-Wire Wire Line
-	8000 4600 7100 4600
-Connection ~ 7100 4600
-Wire Wire Line
-	6200 3000 6200 3550
-Wire Wire Line
-	6000 3000 6000 2550
-Wire Wire Line
-	6000 2550 6200 2550
-$Comp
-L Transistor_BJT:BC327 Q3
-U 1 1 5C928A20
-P 7000 4000
-F 0 "Q3" H 7191 3954 50  0000 L CNN
-F 1 "BC327" H 7191 4045 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7200 3925 50  0001 L CIN
-F 3 "http://www.onsemi.com/pub_link/Collateral/BC327-D.PDF" H 7000 4000 50  0001 L CNN
-	1    7000 4000
-	1    0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:BC337 Q2
-U 1 1 5C92B416
-P 7000 2550
-F 0 "Q2" H 7191 2596 50  0000 L CNN
-F 1 "BC337" H 7191 2505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7200 2475 50  0001 L CIN
-F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 7000 2550 50  0001 L CNN
-	1    7000 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C5
+L Device:C C1
 U 1 1 5C937B4E
 P 4250 3850
-F 0 "C5" H 4100 3950 50  0000 L CNN
+F 0 "C1" H 4100 3950 50  0000 L CNN
 F 1 "680n" H 4050 3750 50  0000 L CNN
 F 2 "" H 4288 3700 50  0001 C CNN
 F 3 "~" H 4250 3850 50  0001 C CNN
@@ -407,10 +110,10 @@ Connection ~ 4250 4600
 Wire Wire Line
 	4250 4600 4150 4600
 $Comp
-L Device:R_US R9
+L Device:R_US R1
 U 1 1 5C93918F
 P 4100 3250
-F 0 "R9" V 4000 3200 50  0000 L CNN
+F 0 "R1" V 4000 3200 50  0000 L CNN
 F 1 "10k" V 4200 3200 50  0000 L CNN
 F 2 "" V 4140 3240 50  0001 C CNN
 F 3 "~" H 4100 3250 50  0001 C CNN
@@ -436,7 +139,6 @@ F 3 "~" H 4500 3850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4500 4000 4500 4600
-Connection ~ 4500 4600
 Wire Wire Line
 	4500 4600 4250 4600
 Wire Wire Line
@@ -448,4 +150,129 @@ Wire Wire Line
 	4700 3250 4700 3850
 Wire Wire Line
 	4700 3850 4650 3850
+$Comp
+L Amplifier_Audio:LM386 U1
+U 1 1 5CA5B6A0
+P 5550 3350
+F 0 "U1" H 5894 3396 50  0000 L CNN
+F 1 "LM386" H 5894 3305 50  0000 L CNN
+F 2 "" H 5650 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm386.pdf" H 5750 3550 50  0001 C CNN
+	1    5550 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C2
+U 1 1 5CA5BE28
+P 4950 3250
+F 0 "C2" V 4725 3250 50  0000 C CNN
+F 1 "100u" V 4816 3250 50  0000 C CNN
+F 2 "" H 4950 3250 50  0001 C CNN
+F 3 "~" H 4950 3250 50  0001 C CNN
+	1    4950 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4850 3250 4700 3250
+Wire Wire Line
+	5250 3250 5050 3250
+Wire Wire Line
+	5250 3450 5250 4600
+Connection ~ 4500 4600
+Wire Wire Line
+	5450 3650 5450 4600
+Wire Wire Line
+	4500 4600 5250 4600
+Connection ~ 5250 4600
+Wire Wire Line
+	5250 4600 5450 4600
+$Comp
+L Device:C C3
+U 1 1 5CA5F147
+P 5850 3800
+F 0 "C3" H 5965 3846 50  0000 L CNN
+F 1 "47n" H 5965 3755 50  0000 L CNN
+F 2 "" H 5888 3650 50  0001 C CNN
+F 3 "~" H 5850 3800 50  0001 C CNN
+	1    5850 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3350 5850 3650
+$Comp
+L Device:R_US R2
+U 1 1 5CA5FCE5
+P 5850 4200
+F 0 "R2" H 5700 4050 50  0000 L CNN
+F 1 "10" H 5700 4200 50  0000 L CNN
+F 2 "" V 5890 4190 50  0001 C CNN
+F 3 "~" H 5850 4200 50  0001 C CNN
+	1    5850 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 3950 5850 4050
+Wire Wire Line
+	5850 4350 5850 4600
+Wire Wire Line
+	5850 4600 5450 4600
+Connection ~ 5450 4600
+Text GLabel 6350 2850 2    50   Input ~ 0
+STEP_UP_-
+Text GLabel 6350 2700 2    50   Input ~ 0
+STEP_UP_+
+Wire Wire Line
+	6350 2850 6250 2850
+Wire Wire Line
+	6250 2850 6250 4600
+Wire Wire Line
+	6250 4600 5850 4600
+Connection ~ 5850 4600
+Wire Wire Line
+	6350 2700 5450 2700
+Wire Wire Line
+	5450 2700 5450 3050
+$Comp
+L Device:CP_Small C4
+U 1 1 5CA62909
+P 6500 3350
+F 0 "C4" V 6275 3350 50  0000 C CNN
+F 1 "1000u" V 6366 3350 50  0000 C CNN
+F 2 "" H 6500 3350 50  0001 C CNN
+F 3 "~" H 6500 3350 50  0001 C CNN
+	1    6500 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6400 3350 5850 3350
+Connection ~ 5850 3350
+Connection ~ 6250 4600
+$Comp
+L Device:Transformer_1P_1S T1
+U 1 1 5CA64CD7
+P 7250 3550
+F 0 "T1" H 7250 3931 50  0000 C CNN
+F 1 "Step Up" H 7250 3840 50  0000 C CNN
+F 2 "" H 7250 3550 50  0001 C CNN
+F 3 "~" H 7250 3550 50  0001 C CNN
+	1    7250 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3750 6850 4600
+Wire Wire Line
+	6250 4600 6850 4600
+Wire Wire Line
+	6600 3350 6850 3350
+$Comp
+L Graphic:SYM_Flash_Small #SYM?
+U 1 1 5CA679D6
+P 7800 3550
+F 0 "#SYM?" V 7710 3550 50  0001 C CNN
+F 1 "SYM_Flash_Small" V 7890 3550 50  0001 C CNN
+F 2 "" H 7800 3525 50  0001 C CNN
+F 3 "~" H 8200 3450 50  0001 C CNN
+	1    7800 3550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
