@@ -1,0 +1,304 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega328P-PU U1
+U 1 1 5DF6AAEE
+P 5400 3850
+F 0 "U1" H 4800 3950 50  0000 R CNN
+F 1 "ATmega328P-PU" V 4756 3805 50  0000 R CNN
+F 2 "Package_DIP:DIP-28_W7.62mm" H 5400 3850 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 5400 3850 50  0001 C CNN
+	1    5400 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x06_Male J1
+U 1 1 5DF6C7B8
+P 2600 3750
+F 0 "J1" H 2708 4039 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 2708 4040 50  0001 C CNN
+F 2 "" H 2600 3750 50  0001 C CNN
+F 3 "~" H 2600 3750 50  0001 C CNN
+	1    2600 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2350 5500 2250
+Wire Wire Line
+	5500 2250 5400 2250
+Wire Wire Line
+	5400 2250 5400 2350
+Wire Wire Line
+	2800 3950 3650 3950
+Wire Wire Line
+	3650 3950 3650 4700
+Wire Wire Line
+	5400 5450 5400 5350
+Wire Wire Line
+	4000 5650 4300 5650
+Wire Wire Line
+	6100 5650 6100 4150
+Wire Wire Line
+	6100 4150 6000 4150
+$Comp
+L Device:Crystal Y1
+U 1 1 5DF6F7C3
+P 2950 5050
+F 0 "Y1" V 2904 5181 50  0000 L CNN
+F 1 "16 MHz Crystal" V 2800 5100 50  0000 L CNN
+F 2 "" H 2950 5050 50  0001 C CNN
+F 3 "~" H 2950 5050 50  0001 C CNN
+	1    2950 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5DF70959
+P 3150 4700
+F 0 "C1" V 2921 4700 50  0000 C CNN
+F 1 "22pF" V 3012 4700 50  0000 C CNN
+F 2 "" H 3150 4700 50  0001 C CNN
+F 3 "~" H 3150 4700 50  0001 C CNN
+	1    3150 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5DF713CA
+P 3150 5450
+F 0 "C2" V 2921 5450 50  0000 C CNN
+F 1 "22pF" V 3012 5450 50  0000 C CNN
+F 2 "" H 3150 5450 50  0001 C CNN
+F 3 "~" H 3150 5450 50  0001 C CNN
+	1    3150 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 5450 2950 5450
+Wire Wire Line
+	2950 5450 2950 5200
+Wire Wire Line
+	3050 4700 2950 4700
+Wire Wire Line
+	2950 4700 2950 4900
+Connection ~ 3650 5450
+Wire Wire Line
+	3650 5450 5400 5450
+Wire Wire Line
+	3250 5450 3650 5450
+Wire Wire Line
+	3250 4700 3650 4700
+Connection ~ 3650 4700
+Wire Wire Line
+	3650 4700 3650 5450
+Wire Wire Line
+	2800 3850 4000 3850
+Wire Wire Line
+	4000 3850 4000 5650
+$Comp
+L Device:R_US R1
+U 1 1 5DF7D30B
+P 4300 5000
+F 0 "R1" H 4368 5046 50  0000 L CNN
+F 1 "10k" H 4368 4955 50  0000 L CNN
+F 2 "" V 4340 4990 50  0001 C CNN
+F 3 "~" H 4300 5000 50  0001 C CNN
+	1    4300 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 5150 4300 5650
+Connection ~ 4300 5650
+Wire Wire Line
+	2800 4050 4300 4050
+Wire Wire Line
+	5400 2250 4300 2250
+Wire Wire Line
+	4300 2250 4300 4050
+Connection ~ 5400 2250
+Connection ~ 4300 4050
+Wire Wire Line
+	4300 4050 4300 4850
+Wire Wire Line
+	2950 5450 2950 5950
+Wire Wire Line
+	2950 5950 6200 5950
+Wire Wire Line
+	6200 5950 6200 3350
+Wire Wire Line
+	6200 3350 6000 3350
+Connection ~ 2950 5450
+Wire Wire Line
+	2950 4700 2700 4700
+Wire Wire Line
+	2700 4700 2700 6100
+Wire Wire Line
+	2700 6100 6300 6100
+Wire Wire Line
+	6300 6100 6300 3250
+Wire Wire Line
+	6300 3250 6000 3250
+Connection ~ 2950 4700
+Wire Wire Line
+	2800 3750 4100 3750
+Wire Wire Line
+	4100 3750 4100 2000
+Wire Wire Line
+	4100 2000 6100 2000
+Wire Wire Line
+	6100 2000 6100 2950
+Wire Wire Line
+	6100 2950 6000 2950
+Wire Wire Line
+	2800 3650 4000 3650
+Wire Wire Line
+	4000 3650 4000 1900
+Wire Wire Line
+	4000 1900 6200 1900
+Wire Wire Line
+	6200 1900 6200 3050
+Wire Wire Line
+	6200 3050 6000 3050
+Wire Wire Line
+	2800 3550 3900 3550
+Wire Wire Line
+	3900 3550 3900 1800
+Wire Wire Line
+	3900 1800 6300 1800
+Wire Wire Line
+	6300 1800 6300 3150
+Wire Wire Line
+	6300 3150 6000 3150
+$Comp
+L Connector:Conn_01x08_Male J2
+U 1 1 5DF864DC
+P 6950 4450
+F 0 "J2" H 7100 4900 50  0000 R CNN
+F 1 "Conn_01x08_Male" H 7300 4900 50  0001 R CNN
+F 2 "" H 6950 4450 50  0001 C CNN
+F 3 "~" H 6950 4450 50  0001 C CNN
+	1    6950 4450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4150 6100 4150
+Connection ~ 6100 4150
+Wire Wire Line
+	6750 4250 6350 4250
+Wire Wire Line
+	6350 4250 6350 4350
+Wire Wire Line
+	6350 4350 6000 4350
+Wire Wire Line
+	6750 4350 6400 4350
+Wire Wire Line
+	6400 4350 6400 4450
+Wire Wire Line
+	6400 4450 6000 4450
+Wire Wire Line
+	6750 4450 6450 4450
+Wire Wire Line
+	6450 4550 6000 4550
+Wire Wire Line
+	6750 4550 6500 4550
+Wire Wire Line
+	6500 4550 6500 4650
+Wire Wire Line
+	6500 4650 6000 4650
+Wire Wire Line
+	6750 4650 6550 4650
+Wire Wire Line
+	6550 4650 6550 4750
+Wire Wire Line
+	6550 4750 6000 4750
+Wire Wire Line
+	6750 4850 6750 5450
+Wire Wire Line
+	6750 5450 5400 5450
+Connection ~ 5400 5450
+Wire Wire Line
+	6750 4750 6650 4750
+Wire Wire Line
+	4300 5650 6100 5650
+Connection ~ 6100 5650
+Wire Wire Line
+	6100 5650 6650 5650
+$Comp
+L Connector:Conn_01x06_Male J3
+U 1 1 5DFA551A
+P 7200 3300
+F 0 "J3" H 7350 3650 50  0000 R CNN
+F 1 "Conn_01x06_Male" H 7550 2800 50  0001 R CNN
+F 2 "" H 7200 3300 50  0001 C CNN
+F 3 "~" H 7200 3300 50  0001 C CNN
+	1    7200 3300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 3100 6450 3100
+Wire Wire Line
+	6450 3100 6450 3250
+Wire Wire Line
+	6450 3250 6300 3250
+Connection ~ 6300 3250
+Wire Wire Line
+	7000 3200 6600 3200
+Wire Wire Line
+	6600 3200 6600 3350
+Wire Wire Line
+	6600 3350 6200 3350
+Connection ~ 6200 3350
+Wire Wire Line
+	6450 4450 6450 4550
+Wire Wire Line
+	6650 4750 6650 5650
+Wire Wire Line
+	6000 4850 6600 4850
+Wire Wire Line
+	6600 4850 6600 3400
+Wire Wire Line
+	6600 3400 6700 3400
+Wire Wire Line
+	6700 3400 6700 3300
+Wire Wire Line
+	6700 3300 7000 3300
+Wire Wire Line
+	7000 3400 6750 3400
+Wire Wire Line
+	6750 3400 6750 3900
+Wire Wire Line
+	6750 3900 7100 3900
+Wire Wire Line
+	7100 3900 7100 4950
+Wire Wire Line
+	7100 4950 6000 4950
+Wire Wire Line
+	7000 3500 6850 3500
+Wire Wire Line
+	6850 3500 6850 3800
+Wire Wire Line
+	6850 3800 7200 3800
+Wire Wire Line
+	7200 3800 7200 5050
+Wire Wire Line
+	7200 5050 6000 5050
+Wire Wire Line
+	6000 2650 6950 2650
+Wire Wire Line
+	6950 2650 6950 3600
+Wire Wire Line
+	6950 3600 7000 3600
+$EndSCHEMATC
