@@ -352,31 +352,35 @@ Wire Wire Line
 $Comp
 L Connector:Screw_Terminal_01x03 J3
 U 1 1 5E4B188A
-P 7800 4050
-F 0 "J3" H 7828 4030 50  0000 L CNN
-F 1 "Conn_01x03_Female" H 7828 3985 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-3_P5.00mm" H 7800 4050 50  0001 C CNN
-F 3 "~" H 7800 4050 50  0001 C CNN
-	1    7800 4050
+P 7750 4350
+F 0 "J3" H 7778 4330 50  0000 L CNN
+F 1 "Conn_01x03_Female" H 7778 4285 50  0001 L CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-3_P5.00mm" H 7750 4350 50  0001 C CNN
+F 3 "~" H 7750 4350 50  0001 C CNN
+	1    7750 4350
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	7400 4250 7550 4250
+Wire Wire Line
+	7550 4450 7400 4450
 Wire Wire Line
 	6600 3250 6600 3450
 $Comp
 L power:GND #PWR07
 U 1 1 5E4D8D31
-P 7150 4100
-F 0 "#PWR07" H 7150 3850 50  0001 C CNN
-F 1 "GND" H 7155 3927 50  0000 C CNN
-F 2 "" H 7150 4100 50  0001 C CNN
-F 3 "" H 7150 4100 50  0001 C CNN
-	1    7150 4100
+P 7100 4400
+F 0 "#PWR07" H 7100 4150 50  0001 C CNN
+F 1 "GND" H 7105 4227 50  0000 C CNN
+F 2 "" H 7100 4400 50  0001 C CNN
+F 3 "" H 7100 4400 50  0001 C CNN
+	1    7100 4400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7600 4050 7150 4050
+	7550 4350 7100 4350
 Wire Wire Line
-	7150 4050 7150 4100
+	7100 4350 7100 4400
 $Comp
 L Device:CP C10
 U 1 1 5E43EA5E
@@ -566,6 +570,8 @@ Connection ~ 3000 6900
 Wire Wire Line
 	4900 3850 5400 3850
 Wire Wire Line
+	7400 4450 7400 5450
+Wire Wire Line
 	3600 3250 3600 3500
 Wire Wire Line
 	4100 3500 4300 3500
@@ -663,6 +669,8 @@ Wire Wire Line
 Connection ~ 6600 1550
 Connection ~ 5400 1200
 Wire Wire Line
+	7400 2500 7400 4250
+Wire Wire Line
 	7100 2500 6600 2500
 Wire Wire Line
 	3000 6900 4900 6900
@@ -748,6 +756,7 @@ F 3 "~" H 5100 5550 50  0001 C CNN
 	1    5100 5550
 	1    0    0    -1  
 $EndComp
+Connection ~ 6600 5450
 $Comp
 L Transistor_BJT:BC546 Q5
 U 1 1 61B14BA9
@@ -876,6 +885,8 @@ Wire Wire Line
 Connection ~ 4800 1200
 Wire Wire Line
 	4800 1200 5400 1200
+Wire Wire Line
+	6600 5450 7400 5450
 Connection ~ 2450 2450
 Wire Wire Line
 	2450 2450 2450 6900
@@ -897,26 +908,4 @@ Wire Wire Line
 Connection ~ 5400 6900
 Wire Wire Line
 	5400 6900 6600 6900
-$Comp
-L Device:CP C8
-U 1 1 61AB4CA6
-P 7250 5450
-F 0 "C8" V 7505 5450 50  0000 C CNN
-F 1 "1000u" V 7414 5450 50  0000 C CNN
-F 2 "Capacitor_THT:C_Radial_D10.0mm_H12.5mm_P5.00mm" H 7288 5300 50  0001 C CNN
-F 3 "~" H 7250 5450 50  0001 C CNN
-	1    7250 5450
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7100 5450 6600 5450
-Connection ~ 6600 5450
-Wire Wire Line
-	7400 5450 7400 4150
-Wire Wire Line
-	7400 4150 7600 4150
-Wire Wire Line
-	7400 2500 7400 3950
-Wire Wire Line
-	7400 3950 7600 3950
 $EndSCHEMATC
